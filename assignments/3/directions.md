@@ -15,8 +15,7 @@ Learning how to forecast, can help you:
 * Set realistic and stretch goals
 * Be prepared for when someone (maybe a boss or client) asks you to predict the future
 
-## What is the expected reading level?
-* Limited coding experience required
+## What is the expected coding level?
 * Familiar with fundamental coding concepts (e.g., commenting, printing, objects)
 
 ## Recipe for creating a forecast with trended data
