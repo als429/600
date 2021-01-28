@@ -41,6 +41,7 @@ Learning how to forecast, can help you:
          * [content] is our root directory in our Colab notebook. By adding content directly into the [content] folder, we avoid complex filepaths later on.
 * Upload the `.csv` file we prepared in step one
 
+**Example:**
 ![Visual on uploading data](upload.jpg "Visual on uploading data")
 
 ### 5. In the first cell add the following code, update the file name, and run this cell
