@@ -35,7 +35,6 @@ Learning how to forecast, can help you:
 
 ### 3. In Google Colabs click [NEW NOTEBOOK] to create a new notebook
 
-
 ### 4.  Upload the data into Google Colabs
 * On the lefthand rail, click on the file icon
 * Find the folder called [content]
@@ -70,7 +69,7 @@ If all goes well, you should see a print out of your data, similar to the exampl
 ![Dataframe printing properly](cell1.jpg "Dataframe in cell1 printing")
 
 
-### 6. Paste in the following code and run in Google Colab Notebook.
+### 6. Paste in the following code to intanstiate object and run in Google Colab Notebook.
 
 ```
 # instantiates a Prophet object
@@ -86,10 +85,11 @@ future = m.make_future_dataframe(periods=365)
 future.tail()
 ```
 
+**Example:**
 ![Dataframe printing properly](cell2.jpg "Dataframe in cell2 printing")
 
 
-### 7. Paste in the following code and run in Google Colab Notebook.
+### 7. Paste in the following code to generate prediction and run in Google Colab Notebook.
 
 ```
 # gets the yhat value
@@ -99,23 +99,29 @@ forecast = m.predict(future)
 forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
 ```
 
+**Example:**
 ![Dataframe printing properly](cell3.jpg "Dataframe in cell3 printing")
 
 
-### 8. Paste in the following code and run in Google Colab Notebook.
+### 8. Paste in the following code to plot data and run in Google Colab Notebook.
 
 ```
 # plot the data on a scatter plot
 fig1 = m.plot(forecast)
 ```
 
+**Example:**
 ![Dataframe printing properly](cell4.jpg "Dataframe in cell4 printing")
 
 
-### 9. Paste in the following code and run in Google Colab Notebook.
+### 9. Paste in the following code to plot components and run in Google Colab Notebook.
 
 ```
 # plot the data components 
 fig2 = m.plot_components(forecast)
 ```
+
+**Example:**
 ![Dataframe printing properly](cell5.jpg "Dataframe in cell4 printing")
+
+### 10. You now have your forecast! The last step is to analyze and present data.
