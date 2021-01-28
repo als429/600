@@ -64,7 +64,6 @@ df = pd.read_csv('your-file-name.csv')
 # prints the first five lines of the dataframe table as output
 df.head()
 ```
-<a href="https://pageviews.toolforge.org/?project=en.wikipedia.org&platform=all-access&agent=user&redirects=0&range=all-time&pages=Technical_writing">Data available here</a>
 
 If all goes well, you should see a print out of your data, similar to the example below:
 ![Dataframe printing properly](cell1.jpg "Dataframe in cell1 printing")
