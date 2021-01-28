@@ -17,7 +17,7 @@ Learning how to forecast, can help you:
 
 ## What is the expected reading level?
 * Limited coding experience required
-* Familiar with fundamental coding concepts (e.g., commenting, printing)
+* Familiar with fundamental coding concepts (e.g., commenting, printing, objects)
 
 ## Recipe for creating a forecast with trended data
 ### 1. First, we need to start with trended data. For learning, we can use INSERT PAGE
