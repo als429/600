@@ -27,6 +27,7 @@ Learning how to forecast, can help you:
 * Column B must be labelled with header "y"
 * All dates in Column A must be formatted as "YYYY-MM-DD" (e.g., 2007-12-10)
 
+**Example:**</br>
 ![Data file properly formatted](data.jpg "Data for Facebook Prophet")
 
 ### 2.  Open the following URLs
@@ -41,7 +42,7 @@ Learning how to forecast, can help you:
          * [content] is our root directory in our Colab notebook. By adding content directly into the [content] folder, we avoid complex filepaths later on.
 * Upload the `.csv` file we prepared in step one
 
-**Example:**
+**Example:**</br>
 ![Visual on uploading data](upload.jpg "Visual on uploading data")
 
 ### 5. In the first cell add the following code, update the file name, and run this cell
@@ -85,7 +86,7 @@ future = m.make_future_dataframe(periods=365)
 future.tail()
 ```
 
-**Example:**
+**Example:**</br>
 ![Dataframe printing properly](cell2.jpg "Dataframe in cell2 printing")
 
 
@@ -99,7 +100,7 @@ forecast = m.predict(future)
 forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
 ```
 
-**Example:**
+**Example:**</br>
 ![Dataframe printing properly](cell3.jpg "Dataframe in cell3 printing")
 
 
@@ -110,7 +111,7 @@ forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
 fig1 = m.plot(forecast)
 ```
 
-**Example:**
+**Example:**</br>
 ![Dataframe printing properly](cell4.jpg "Dataframe in cell4 printing")
 
 
@@ -121,7 +122,7 @@ fig1 = m.plot(forecast)
 fig2 = m.plot_components(forecast)
 ```
 
-**Example:**
+**Example:**</br>
 ![Dataframe printing properly](cell5.jpg "Dataframe in cell4 printing")
 
 ### 10. You now have your forecast! The last step is to analyze and present data.
