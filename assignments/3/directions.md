@@ -1,21 +1,42 @@
-# Forecasting with Facebook Prophet and Python
+# Forecasting with Facebook Prophet in Python Notebook in Google Colab
+## What is forecasting ?
+Forecasting is the process of using mathematical models to make an educated guess of what will happen in the future. While intuitively simple, the underlying math can (and does) vary greatly across methodologies. This post seeks to cover one tool, Facebook Prophet, and walk the reader through how to create a forecast in Google Colab.  
 
-## What is it?
+## What is Facebook Prophet?
+<a href="https://facebook.github.io/prophet/">Facebook Prophet</a> is a forecasting library for R and Python. It takes trended data as input and outputs a forecast. Facebook Prophet uses an additive model.
 
+## What is Google Colab?
+<a href="https://colab.research.google.com/>Google Colab</a> allows users to run Python Notebooks in a browser.
+         
 ## Why should you learn?
+Learning how to forecast, can help you:
+* Make more informed, proactive decisions 
+* Assess impact of an event (using a forecast to determine *what **should have** happened* vs. *what **actually** happened*)
+* Set realistic and stretch goals
+* Be prepared for when someone (maybe a boss or client) asks you to predict the future
 
 ## Recipe for creating a forecast with trended data
+### 1. First, we need to start with trended data. For learning, we can use INSERT PAGE
+* Must be in a `.csv` file format
+* Must only have two columns 
+* Column A must be labelled with header "ds" 
+* Column B must be labelled with header "y"
+* All dates in Column A must be formatted as "YYYY-MM-DD" (e.g., 2007-12-10)
 
-### 1. 
+![Data file properly formatted](data.jpg "Data for Facebook Prophet")
+
+### 2.  Open the following URLs
+* <a href="https://facebook.github.io/prophet/docs/quick_start.html#python-api">Facebook Prophet - Getting Started Guide</a>
+* <a href="https://colab.research.google.com/>Google Colab</a> 
+
+### 3. In Google Colabs click [NEW NOTEBOOK] to create a new notebook
 
 
-### 2. 
+### 4.  Upload the data into Google Colabs
+* On the lefthand rail, click on the file icon
+* Find the folder called [content]
+* Upload the `.csv` file we prepared in step one
 
-
-### 3. 
-
-
-### 4. 
 
 
 ### 5. 
