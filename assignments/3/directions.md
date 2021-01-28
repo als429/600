@@ -1,5 +1,5 @@
 # Forecasting with Facebook Prophet in Python Notebook in Google Colab
-## What is forecasting ?
+## What is forecasting?
 Forecasting is the process of using mathematical models to make an educated guess of what will happen in the future. While intuitively simple, the underlying math can (and does) vary greatly across methodologies. This post seeks to cover one tool, Facebook Prophet, and walk the reader through how to create a forecast in Google Colab.  
 
 ## What is Facebook Prophet?
@@ -56,22 +56,55 @@ from fbprophet import Prophet
 # update **your-file-name**
 df = pd.read_csv('your-file-name.csv')
 
-# if you would like to test, comment the above line and uncomment the line below
-# df = pd.read_csv('my-file-name.csv')
+# if you would like to test, comment out the line above and uncomment the line below to use the test data source
+# the dataset below covers Wikipedia's technical writing page's pageviews data
+# df = pd.read_csv('https://raw.githubusercontent.com/als429/600/main/assignments/3/technical-writing-pageviews.csv')
 
 # prints the first five lines of the dataframe table as output
 df.head()
 ```
+<a href="https://pageviews.toolforge.org/?project=en.wikipedia.org&platform=all-access&agent=user&redirects=0&range=all-time&pages=Technical_writing">Data available here</a>
 
 If all goes well, you should see a print out of your data, similar to the example below:
 ![Dataframe printing properly](print.jpg "Dataframe printing")
 
 
 ### 6. 
+```
+# instantiates a Prophet object
+m = Prophet()
+
+# fits the Prophet object to the data we added
+m.fit(df)
+
+# makes a dataframe with future dates for forecasting
+future = m.make_future_dataframe(periods=365)
+
+# prints the last five rows of the prediction
+future.tail()
+```
 
 
 ### 7. 
 
+```
+# gets the yhat value
+forecast = m.predict(future)
+
+# prints the last five rows of the forecast ds, yhat, yhat_lower, and yhat_upper 
+forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
+```
 
 ### 8. 
 
+```
+# plot the data on a scatter plot
+fig1 = m.plot(forecast)
+```
+
+### 9. 
+
+```
+# plot the data components 
+fig2 = m.plot_components(forecast)
+```
