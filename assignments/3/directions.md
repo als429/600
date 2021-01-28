@@ -42,6 +42,7 @@ Learning how to forecast, can help you:
          * [content] is our root directory in our Colab notebook. By adding content directly into the [content] folder, we avoid complex filepaths later on.
 * Upload the `.csv` file we prepared in step one
 
+![Visual on uploading data](upload.jpg "Visual on uploading data")
 
 ### 5. In the first cell add the following code, update the file name, and run this cell
 
@@ -66,10 +67,11 @@ df.head()
 <a href="https://pageviews.toolforge.org/?project=en.wikipedia.org&platform=all-access&agent=user&redirects=0&range=all-time&pages=Technical_writing">Data available here</a>
 
 If all goes well, you should see a print out of your data, similar to the example below:
-![Dataframe printing properly](print.jpg "Dataframe printing")
+![Dataframe printing properly](cell1.jpg "Dataframe in cell1 printing")
 
 
-### 6. 
+### 6. Paste in the following code and run in Google Colab Notebook.
+
 ```
 # instantiates a Prophet object
 m = Prophet()
@@ -84,8 +86,10 @@ future = m.make_future_dataframe(periods=365)
 future.tail()
 ```
 
+![Dataframe printing properly](cell2.jpg "Dataframe in cell2 printing")
 
-### 7. 
+
+### 7. Paste in the following code and run in Google Colab Notebook.
 
 ```
 # gets the yhat value
@@ -95,16 +99,23 @@ forecast = m.predict(future)
 forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
 ```
 
-### 8. 
+![Dataframe printing properly](cell3.jpg "Dataframe in cell3 printing")
+
+
+### 8. Paste in the following code and run in Google Colab Notebook.
 
 ```
 # plot the data on a scatter plot
 fig1 = m.plot(forecast)
 ```
 
-### 9. 
+![Dataframe printing properly](cell4.jpg "Dataframe in cell4 printing")
+
+
+### 9. Paste in the following code and run in Google Colab Notebook.
 
 ```
 # plot the data components 
 fig2 = m.plot_components(forecast)
 ```
+![Dataframe printing properly](cell5.jpg "Dataframe in cell4 printing")
