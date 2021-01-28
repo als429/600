@@ -6,7 +6,7 @@ Forecasting is the process of using mathematical models to make an educated gues
 <a href="https://facebook.github.io/prophet/">Facebook Prophet</a> is a forecasting library for R and Python. It takes trended data as input and outputs a forecast. Facebook Prophet uses an additive model.
 
 ## What is Google Colab?
-<a href="https://colab.research.google.com/>Google Colab</a> allows users to run Python Notebooks in a browser.
+<a href="https://colab.research.google.com/">Google Colab</a> allows users to run Python Notebooks in a browser.
          
 ## Why should you learn?
 Learning how to forecast, can help you:
@@ -14,6 +14,10 @@ Learning how to forecast, can help you:
 * Assess impact of an event (using a forecast to determine *what **should have** happened* vs. *what **actually** happened*)
 * Set realistic and stretch goals
 * Be prepared for when someone (maybe a boss or client) asks you to predict the future
+
+## What is the expected reading level?
+* Limited coding experience required
+* Familiar with fundamental coding concepts (e.g., commenting, printing)
 
 ## Recipe for creating a forecast with trended data
 ### 1. First, we need to start with trended data. For learning, we can use INSERT PAGE
@@ -27,7 +31,7 @@ Learning how to forecast, can help you:
 
 ### 2.  Open the following URLs
 * <a href="https://facebook.github.io/prophet/docs/quick_start.html#python-api">Facebook Prophet - Getting Started Guide</a>
-* <a href="https://colab.research.google.com/>Google Colab</a> 
+* <a href="https://colab.research.google.com/">Google Colab</a> 
 
 ### 3. In Google Colabs click [NEW NOTEBOOK] to create a new notebook
 
@@ -35,11 +39,32 @@ Learning how to forecast, can help you:
 ### 4.  Upload the data into Google Colabs
 * On the lefthand rail, click on the file icon
 * Find the folder called [content]
+         * [content] is our root directory in our Colab notebook. By adding content directly into the [content] folder, we avoid complex filepaths later on.
 * Upload the `.csv` file we prepared in step one
 
 
+### 5. In the first cell add the following code, update the file name, and run this cell
 
-### 5. 
+'''
+# imports pandas library, which allows you to manipulate data within Python Notebooks
+import pandas as pd 
+
+# imports the Facebook Prophet library
+from fbprophet import Prophet
+
+# creates a dataframe called "df", which reads in the csv
+# update **your-file-name**
+df = pd.read_csv('your-file-name.csv')
+
+# if you would like to test, comment the above line and uncomment the line below
+# df = pd.read_csv('my-file-name.csv')
+
+# prints the first five lines of the dataframe table as output
+df.head()
+'''
+
+If all goes well, you should see a print out of your data, similar to the example below:
+![Dataframe printing properly](print.jpg "Dataframe printing")
 
 
 ### 6. 
