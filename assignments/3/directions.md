@@ -45,7 +45,7 @@ Learning how to forecast, can help you:
 
 ### 5. In the first cell add the following code, update the file name, and run this cell
 
-'''
+```
 # imports pandas library, which allows you to manipulate data within Python Notebooks
 import pandas as pd 
 
@@ -61,7 +61,7 @@ df = pd.read_csv('your-file-name.csv')
 
 # prints the first five lines of the dataframe table as output
 df.head()
-'''
+```
 
 If all goes well, you should see a print out of your data, similar to the example below:
 ![Dataframe printing properly](print.jpg "Dataframe printing")
