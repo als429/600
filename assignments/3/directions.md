@@ -19,7 +19,7 @@ Learning how to forecast, can help you:
 * Familiar with fundamental coding concepts (e.g., commenting, printing, objects)
 
 ## Recipe for creating a forecast with trended data
-### 1. First, we need to start with trended data. For learning, we can use INSERT PAGE
+### 1. First, we need to start with trended data. 
 * Must be in a `.csv` file format
 * Must only have two columns 
 * Column A must be labelled with header "ds" 
